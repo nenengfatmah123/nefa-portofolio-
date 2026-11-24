@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Neneng Fatmah (NEFA) — Achievement Portfolio | Live Streaming Host & Content Creator</title>
+  <title>Neneng Fatmah (NEFA) — Portfolio | Live Streaming Host & Content Creator</title>
   <meta name="description" content="Portofolio Resmi Neneng Fatmah (NEFA) — Live Streaming Host, Social Media Specialist & Content Creator dengan pengalaman 5+ tahun memegang brand Focallure, Pinkflash, dan WarnawarniKids.">
 
-  <!-- Google Fonts: Groovy Display, Vintage Serif & Modern Clean Sans -->
+  <!-- Google Fonts: Shrikhand, Playfair Display & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Shrikhand&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Shrikhand&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="theme-pink-y2k">
+<body class="theme-pink-y2k mode-slide-deck">
 
   <!-- Checkered Accent Top Bar (Signature Canva Y2K Design) -->
   <div class="pink-checker-bar top-checker" aria-hidden="true"></div>
@@ -25,12 +25,12 @@
     <div class="header-container">
       
       <!-- Brand Identitas -->
-      <a href="#hero" class="brand-logo" aria-label="Beranda Neneng Fatmah">
+      <a href="#slide-1" class="brand-logo" onclick="goToSlide(1); return false;" aria-label="Beranda Neneng Fatmah">
         <span class="logo-main">Neneng Fatmah</span>
-        <span class="logo-sub">LIVE STREAMING HOST & CONTENT CREATOR · NEFA</span>
+        <span class="logo-sub">LIVE STREAMING HOST &amp; CONTENT CREATOR · NEFA</span>
       </a>
 
-      <!-- Pengalih Mode: Mode Web vs Mode Slide Canva -->
+      <!-- Pengalih Mode: Mode Slide (Canva 16:9) vs Mode Web (Gulir Vertikal) -->
       <div class="view-mode-toggle" id="viewModeToggle">
         <button class="mode-btn active" id="btnSlideMode" title="Tampilan Presentasi Slide 19 Halaman Canva">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
@@ -44,15 +44,28 @@
 
       <!-- Navigasi Menu Desktop -->
       <nav class="desktop-nav" aria-label="Navigasi Utama">
-        <a href="#intro" class="nav-link">Intro</a>
-        <a href="#creations" class="nav-link">Karya</a>
-        <a href="#playbook" class="nav-link">Strategi</a>
-        <a href="#case-beauty" class="nav-link">Studi Kasus</a>
-        <a href="#funnel" class="nav-link">Funnel</a>
-        <a href="#best-gmv" class="nav-link">Prestasi</a>
-        <a href="#what-i-bring" class="nav-link">Skill</a>
-        <a href="#thank-you" class="nav-link cta-pill">Kontak</a>
+        <button type="button" class="nav-link" onclick="goToSlide(2)">Intro</button>
+        <button type="button" class="nav-link" onclick="goToSlide(4)">Disiplin</button>
+        <button type="button" class="nav-link" onclick="goToSlide(5)">Karya</button>
+        <button type="button" class="nav-link" onclick="goToSlide(8)">Strategi</button>
+        <button type="button" class="nav-link" onclick="goToSlide(9)">Studi Kasus</button>
+        <button type="button" class="nav-link" onclick="goToSlide(10)">Video</button>
+        <button type="button" class="nav-link" onclick="goToSlide(13)">Prestasi</button>
+        <button type="button" class="nav-link" onclick="goToSlide(18)">Skill</button>
+        <button type="button" class="nav-link cta-pill" onclick="goToSlide(19)">Kontak</button>
       </nav>
+
+      <!-- Action Buttons Header -->
+      <div class="header-action-group">
+        <a href="Neneng_Patmah_Portfolio.pdf" download="Neneng_Patmah_Portfolio.pdf" class="btn-header-pdf" title="Unduh Dokumen PDF Resmi (19 Halaman)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>PDF</span>
+        </a>
+        <a href="https://wa.me/6285926090441?text=Halo%20Kak%20Neneng%20Fatmah%20(NEFA),%20saya%20melihat%20portofolio%20Canva%20Kakak%20dan%20tertarik%20bekerja%20sama" target="_blank" rel="noopener" class="btn-header-wa" title="Hubungi via WhatsApp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
 
       <!-- Tombol Hamburger Mobile -->
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Buka menu navigasi">
@@ -62,18 +75,27 @@
 
     <!-- Menu Drawer Mobile -->
     <div class="mobile-drawer" id="mobileDrawer">
-      <a href="#hero" class="mobile-nav-link">Beranda</a>
-      <a href="#intro" class="mobile-nav-link">Introduction & Disiplin</a>
-      <a href="#creations" class="mobile-nav-link">Karya Makeup & Live</a>
-      <a href="#playbook" class="mobile-nav-link">Playbook 4-Pillar</a>
-      <a href="#case-beauty" class="mobile-nav-link">Studi Kasus Beauty</a>
-      <a href="#case-fashion" class="mobile-nav-link">Studi Kasus Fashion</a>
-      <a href="#funnel" class="mobile-nav-link">Funnel Scroll to Sale</a>
-      <a href="#best-gmv" class="mobile-nav-link">Prestasi & Leaderboard</a>
-      <a href="#what-i-bring" class="mobile-nav-link">Keahlian & Value</a>
-      <a href="#thank-you" class="mobile-nav-link highlight">Hubungi Nefa</a>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(1)">01 · Beranda Cover</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(2)">02 · Introduction</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(3)">03 · Passion for Makeup</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(4)">04 · Rekor Absensi &amp; Disiplin</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(5)">05 · Karya Makeup Live</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(6)">06 · Produksi Harian TikTok</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(7)">07 · Social Media Strategy</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(8)">08 · 4-Pillar Content Playbook</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(9)">09 · Studi Kasus Beauty (@cantikcuan.id)</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(10)">10 · Studi Kasus Fashion (Video Interaktif)</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(11)">11 · Funnel From Scroll to Sale</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(12)">12 · Portfolio Divider</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(13)">13 · Juara 1 Best GMV Rp 191 Juta</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(14)">14 · Top 3 Focallure Shopee</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(15)">15 · Top 5 Pinkflash TikTok</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(16)">16 · Top 5 Focallure TikTok Live</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(17)">17 · Best Makeup +2 Point Audit</button>
+      <button type="button" class="mobile-nav-link" onclick="goToSlide(18)">18 · What I Bring to Your Team</button>
+      <button type="button" class="mobile-nav-link highlight" onclick="goToSlide(19)">19 · Thank You &amp; Kontak</button>
       <div class="mobile-view-switch">
-        <button class="switch-slide-btn" onclick="setMode('slide')">Buka Tampilan Slide Canva</button>
+        <a href="Neneng_Patmah_Portfolio.pdf" download="Neneng_Patmah_Portfolio.pdf" class="switch-slide-btn" style="text-decoration:none; display:block; text-align:center;">📥 Unduh PDF Resmi (19 Halaman)</a>
       </div>
     </div>
   </header>
@@ -86,712 +108,478 @@
     <!-- Kontrol Bilah Mode Slide Deck (19 Slide) -->
     <div class="slide-deck-controls" id="slideDeckControls">
       <div class="slide-deck-header-info">
-        <span class="slide-badge-title">🌸 PRESENTASI RESMI NENENG FATMAH</span>
+        <span class="slide-badge-title" id="slideBadgeTitle">🌸 01 · NENENG FATMAH PORTFOLIO</span>
         <span class="slide-counter-badge" id="slideCounterText">Slide 1 dari 19</span>
       </div>
+
       <div class="slide-nav-actions">
+        <!-- Tombol Prev -->
         <button class="slide-ctrl-btn" id="prevSlideBtn" title="Slide Sebelumnya (&larr;)">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
           <span>Sebelumnya</span>
         </button>
-        <div class="slide-dots-container" id="slideDotsContainer" aria-label="Navigasi 19 Slide">
-          <!-- 19 titik dinamis terisi via JavaScript -->
-        </div>
+
+        <!-- 19 Titik Navigasi Dinamis -->
+        <div class="slide-dots-container" id="slideDotsContainer" aria-label="Navigasi 19 Slide Canva"></div>
+
+        <!-- Tombol Next -->
         <button class="slide-ctrl-btn" id="nextSlideBtn" title="Slide Selanjutnya (&rarr;)">
           <span>Selanjutnya</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
-        <button class="slide-fullscreen-btn" id="toggleFullscreenBtn" title="Layar Penuh">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-        </button>
+
+        <!-- Utility Buttons: Auto-play, Sound, Fullscreen -->
+        <div class="slide-util-group">
+          <button class="slide-icon-btn" id="toggleAutoPlayBtn" title="Putar Otomatis (Slideshow)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+          <button class="slide-icon-btn" id="toggleSoundBtn" title="Efek Suara Sentuhan (On/Off)">
+            <span id="soundIcon">🔔</span>
+          </button>
+          <button class="slide-icon-btn" id="toggleFullscreenBtn" title="Mode Layar Penuh">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Progress Line Bar -->
+      <div class="slide-progress-track">
+        <div class="slide-progress-fill" id="slideProgressFill" style="width: 5.26%;"></div>
       </div>
     </div>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 1: COVER / HERO                      -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-cover" id="hero" data-slide-index="1">
-      <div class="canva-card cover-card">
-        <div class="card-inner cover-inner">
-          
-          <div class="floating-sticker sticker-curler" aria-hidden="true">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#FF5DA8" stroke-width="2"><path d="M6 18h12M12 6v12M9 6a3 3 0 1 0 6 0"/></svg>
-          </div>
-          <div class="floating-sticker sticker-mirror" aria-hidden="true">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="#FFB8DE" stroke="#FF2E93" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M12 15v6M9 19h6"/></svg>
-          </div>
-          <div class="sparkle-star s1" aria-hidden="true">✦</div>
-          <div class="sparkle-star s2" aria-hidden="true">✦</div>
+    <!-- ========================================================================
+         19 SLIDES PRESENTASI: 100% PERSISI SAMA DENGAN DOKUMEN PDF CANVA
+         ======================================================================== -->
+    <div class="slides-viewport" id="slidesViewport">
 
-          <div class="cover-badge-oval">
-            <h1 class="cover-title-name">NENENG FATMAH</h1>
-            <div class="cover-subtitle-script">Portfolio</div>
-          </div>
-
-          <p class="cover-role-tag">LIVE STREAMING HOST &amp; SOCIAL MEDIA CONTENT CREATOR</p>
-
-          <div class="cover-actions-row">
-            <button class="btn-primary-pink" onclick="goToSlide(2)">
-              <span>Buka Portofolio Lengkap</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
-            <a href="https://wa.me/6285926090441?text=Halo%20Kak%20Neneng%20(NEFA),%20saya%20tertarik%20bekerja%20sama" target="_blank" rel="noopener" class="btn-outline-pink">
-              <span>Hubungi via WhatsApp</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SLIDE 2: INTRODUCTION                      -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-intro" id="intro" data-slide-index="2">
-      <div class="canva-card intro-card">
-        <div class="card-inner intro-inner">
-          
-          <div class="intro-heading-wrap">
-            <h2 class="bubble-header-title">Introduction</h2>
-          </div>
-
-          <div class="intro-grid-content">
-            <div class="pink-speech-bubble">
-              <p>Hi everyone, my name is <strong>Neneng Fatmah</strong>, but everyone calls me Neneng, or <strong>NEFA</strong> as my stage name. I have <strong>5 years of experience</strong> as a Live Streaming Host and Content Creator, and I'm highly motivated to seek new challenges. I possess strong communication skills and a great passion for makeup artistry.</p>
-              <div class="bubble-sparkle-decor" aria-hidden="true">✨</div>
-            </div>
-
-            <div class="intro-photo-frame">
-              <div class="photo-border-wrap">
-                <img src="web_assets/images/canva_slides/page_2.png" alt="Neneng Fatmah — Live Host & Content Creator" class="canva-slide-full-img preview-card-img">
-              </div>
+      <!-- SLIDE 1: COVER -->
+      <section class="deck-slide active-slide" id="slide-1" data-slide-index="1" data-slide-title="01 · Cover Portfolio">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_1.png" alt="Neneng Fatmah Achievement Portfolio Cover" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <div class="hotspot-bottom-actions">
+              <button type="button" class="btn-canva-action primary" onclick="goToSlide(2)">
+                <span>Mulai Presentasi</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+              <a href="https://wa.me/6285926090441?text=Halo%20Kak%20Neneng%20(NEFA),%20saya%20tertarik%20bekerja%20sama" target="_blank" rel="noopener" class="btn-canva-action wa">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                <span>WhatsApp</span>
+              </a>
+              <a href="Neneng_Patmah_Portfolio.pdf" download="Neneng_Patmah_Portfolio.pdf" class="btn-canva-action pdf">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Unduh PDF</span>
+              </a>
             </div>
           </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 3: PASSION FOR MAKEUP ARTISTRY       -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-passion" id="passion" data-slide-index="3">
-      <div class="canva-card passion-card">
-        <div class="card-inner passion-inner">
-          
-          <div class="passion-grid-content">
-            <div class="passion-photo-frame">
-              <div class="photo-border-wrap">
-                <img src="web_assets/images/canva_slides/page_3.png" alt="Makeup Artistry Neneng Fatmah" class="canva-slide-full-img preview-card-img">
-              </div>
-            </div>
-
-            <div class="pink-speech-bubble">
-              <p>Makeup is a true pleasure for me, and I always strive to create looks that are both unique and captivating. My creative process is fueled by an unquenchable curiosity about the world, which provides inspiration and innovative ideas in every piece of my artistry.</p>
-              <div class="bubble-sparkle-decor" aria-hidden="true">💄</div>
+      <!-- SLIDE 2: INTRODUCTION -->
+      <section class="deck-slide" id="slide-2" data-slide-index="2" data-slide-title="02 · Introduction (5 Tahun Pengalaman)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_2.png" alt="Introduction — Neneng Fatmah (NEFA)" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <div class="hotspot-badge-pill" style="bottom: 12%; left: 8%;">
+              <span>✨ 5 Tahun Live Host &amp; Content Creator · Stage Name: NEFA</span>
             </div>
           </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 4: OUTSTANDING ATTENDANCE RECORD     -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-attendance" id="attendance" data-slide-index="4">
-      <div class="canva-card attendance-card">
-        <div class="card-inner attendance-inner">
-          
-          <div class="attendance-header-banner">
-            <h2>My attendance record is outstanding, with only two authorized absences, and I consistently clock in and out on time.</h2>
-          </div>
-
-          <div class="attendance-proof-frame">
-            <img src="web_assets/images/canva_slides/page_4.png" alt="Catatan Rekor Absensi dan Disiplin Kerja Neneng Fatmah" class="canva-slide-full-img">
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SLIDE 5: FAVORITE MAKEUP CREATIONS         -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-creations" id="creations" data-slide-index="5">
-      <div class="canva-card creations-card">
-        <div class="card-inner creations-inner">
-          
-          <div class="creations-header-wrap">
-            <h2 class="bubble-header-title">Let me show you some of my favorite makeup creations</h2>
-          </div>
-
-          <div class="creations-gallery-frame">
-            <img src="web_assets/images/canva_slides/page_5.png" alt="Koleksi Kreasi Makeup & Live Selling Focallure dan Pinkflash" class="canva-slide-full-img">
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SLIDE 6: DAILY TIKTOK CONTENT PRODUCTION   -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-tiktok-daily" id="tiktok-daily" data-slide-index="6">
-      <div class="canva-card tiktok-daily-card">
-        <div class="card-inner tiktok-daily-inner">
-          
-          <div class="tiktok-daily-grid">
-            <div class="pink-speech-bubble">
-              <p>Following my supervisor's instructions, I routinely design and disseminate a variety of content on TikTok every day. This process includes creating innovative ideas, filming and editing videos, and scheduling uploads to the platform regularly. The goal is to maintain a sustained and engaging presence, aligning with the targets set in our social media strategy.</p>
-            </div>
-
-            <div class="tiktok-daily-proof-frame">
-              <img src="web_assets/images/canva_slides/page_6.png" alt="Produksi Konten Harian TikTok Neneng Fatmah" class="canva-slide-full-img">
+      <!-- SLIDE 3: PASSION FOR MAKEUP ARTISTRY -->
+      <section class="deck-slide" id="slide-3" data-slide-index="3" data-slide-title="03 · Passion for Makeup Artistry">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_3.png" alt="Passion for Makeup Artistry — Neneng Fatmah" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <div class="hotspot-badge-pill" style="bottom: 12%; right: 8%;">
+              <span>💄 Kreativitas &amp; Eksplorasi Visual yang Memikat Penonton</span>
             </div>
           </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 7: SECTION DIVIDER — STRATEGY        -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-divider" id="section-strategy" data-slide-index="7">
-      <div class="canva-card divider-card">
-        <div class="card-inner divider-inner">
-          
-          <div class="floating-sticker sticker-curler" aria-hidden="true">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#FF5DA8" stroke-width="2"><path d="M6 18h12M12 6v12M9 6a3 3 0 1 0 6 0"/></svg>
-          </div>
-          <div class="floating-sticker sticker-mirror" aria-hidden="true">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="#FFB8DE" stroke="#FF2E93" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M12 15v6M9 19h6"/></svg>
-          </div>
-
-          <div class="cover-badge-oval">
-            <h2 class="cover-title-name">Social Media</h2>
-            <div class="cover-subtitle-script">Strategy</div>
-          </div>
-
-          <p class="cover-role-tag">PLAYBOOK · CASE STUDIES · CONTENT FUNNEL</p>
-
-          <div class="divider-actions">
-            <button class="btn-primary-pink" onclick="goToSlide(8)">
-              <span>Pelajari Strategi Konten</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <!-- SLIDE 4: OUTSTANDING ATTENDANCE RECORD -->
+      <section class="deck-slide" id="slide-4" data-slide-index="4" data-slide-title="04 · Rekor Absensi &amp; Disiplin Kerja">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_4.png" alt="Outstanding Attendance Record Neneng Fatmah" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <button type="button" class="hotspot-zoom-trigger" onclick="openImageModal('web_assets/images/canva_slides/page_4.png', 'Rekor Absensi & Disiplin Kerja (Feb 2024 - Mar 2025: Hanya 2 Izin Resmi, Disiplin Waktu)')" style="top: 25%; left: 5%; width: 90%; height: 68%;">
+              <span class="zoom-tag-pill">🔍 Klik untuk Perbesar Bukti Rekor Absensi</span>
             </button>
           </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 8: 4-PILLAR CONTENT PLAYBOOK         -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-playbook" id="playbook" data-slide-index="8">
-      <div class="canva-card playbook-card">
-        <div class="card-inner playbook-inner">
-          
-          <div class="playbook-top-bar">
-            <div class="pill-banner-pink">
-              <h2>Stop the Scroll. Start the Sale.</h2>
-            </div>
-            <p class="playbook-sub">My 4-pillar content playbook, built for TikTok and live commerce</p>
-          </div>
-
-          <div class="pillars-four-grid">
-            
-            <div class="pillar-pink-card">
-              <div class="pillar-num-badge">1</div>
-              <h3 class="pillar-title">Hook First</h3>
-              <p class="pillar-desc">The first 2 seconds decide everything. Every video opens with a bold on-screen hook that makes thumbs stop.</p>
-              <div class="pillar-seen-box">
-                <span class="seen-label">Seen in action</span>
-                <span class="seen-text">“Caught by Mom!” · “Join the Trend”</span>
-              </div>
-            </div>
-
-            <div class="pillar-pink-card">
-              <div class="pillar-num-badge">2</div>
-              <h3 class="pillar-title">Relatable Storytelling</h3>
-              <p class="pillar-desc">Real-life moments (in-laws, neighbors, PMS) turn viewers into fans who tag a friend and hit share.</p>
-              <div class="pillar-seen-box">
-                <span class="seen-label">Seen in action</span>
-                <span class="seen-text">“Mama PMS!!” · “Gossiped about by the neighbors”</span>
-              </div>
-            </div>
-
-            <div class="pillar-pink-card">
-              <div class="pillar-num-badge">3</div>
-              <h3 class="pillar-title">Educate &amp; Demo</h3>
-              <p class="pillar-desc">Swatches, try-ons and how-to-apply tutorials build trust long before the sales pitch.</p>
-              <div class="pillar-seen-box">
-                <span class="seen-label">Seen in action</span>
-                <span class="seen-text">“Try on all shades” · “How to apply?”</span>
-              </div>
-            </div>
-
-            <div class="pillar-pink-card">
-              <div class="pillar-num-badge">4</div>
-              <h3 class="pillar-title">Convert with Urgency</h3>
-              <p class="pillar-desc">Bundles, limited-time offers, pinned best-sellers and live invites turn views into orders.</p>
-              <div class="pillar-seen-box">
-                <span class="seen-label">Seen in action</span>
-                <span class="seen-text">“Join Live Now!!” · “Bundle Best Seller”</span>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SLIDE 9: CASE STUDY — BEAUTY ON TIKTOK     -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-case-beauty" id="case-beauty" data-slide-index="9">
-      <div class="canva-card case-card">
-        <div class="card-inner case-inner">
-          
-          <div class="case-header-bar">
-            <div class="pill-banner-pink">
-              <h2>Case Study: Beauty on TikTok</h2>
-            </div>
-          </div>
-
-          <div class="case-body-layout">
-            
-            <!-- Dua Mockup HP dengan Gambar Asli -->
-            <div class="case-phones-col">
-              <div class="phone-mockup-pink">
-                <div class="phone-top-notch"></div>
-                <img src="web_assets/images/WhatsApp Image 2026-11-19 at 23.46.13.jpeg" alt="Profil Akun TikTok Cuan for Cuantik" class="phone-screen-img">
-              </div>
-              <div class="phone-mockup-pink">
-                <div class="phone-top-notch"></div>
-                <img src="web_assets/images/WhatsApp Image 2026-11-19 at 23.46.13 (1).jpeg" alt="Grid Konten Video Beauty Pinkflash & Focallure" class="phone-screen-img">
-              </div>
-            </div>
-
-            <!-- Panel Metrik & Strategi -->
-            <div class="case-data-col">
-              <div class="account-handle-badge">
-                <span>@cantikcuan.id · Cuan for Cuantik</span>
-              </div>
-
-              <div class="stats-three-row">
-                <div class="stat-pill-box">
-                  <span class="stat-big-val">1,405</span>
-                  <span class="stat-lbl">Followers</span>
-                </div>
-                <div class="stat-pill-box">
-                  <span class="stat-big-val">24.2K</span>
-                  <span class="stat-lbl">Total likes</span>
-                </div>
-                <div class="stat-pill-box">
-                  <span class="stat-big-val">233.2K</span>
-                  <span class="stat-lbl">Top video views</span>
-                </div>
-              </div>
-
-              <div class="strategy-list-box">
-                <h3 class="strategy-heading">Strategy in action</h3>
-                <ul class="strategy-bullets">
-                  <li><strong>Shopper-language titles:</strong> product names in every video (“Lipcream Matte Nude Series”, “Eyebrow Powder Stamp”)</li>
-                  <li><strong>Trust builders:</strong> how-to-apply and try-on-all-shades demos</li>
-                  <li><strong>Fresh angles:</strong> seasonal Halloween palette and “secret to flawless makeup” curiosity hooks</li>
-                  <li><strong>Urgency CTA on bundles:</strong> “checkout now, the price won't stay this low”</li>
-                  <li><strong>Pinned winners + playlists:</strong> (Face Makeup, Lippies) so new visitors binge</li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SLIDE 10: CASE STUDY — MODEST FASHION      -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-case-fashion" id="case-fashion" data-slide-index="10">
-      <div class="canva-card case-card">
-        <div class="card-inner case-inner">
-          
-          <div class="case-header-bar">
-            <div class="pill-banner-pink">
-              <h2>Case Study: Modest Fashion on TikTok</h2>
-            </div>
-          </div>
-
-          <div class="case-body-layout">
-            
-            <!-- Dua Mockup HP: Screenshot Grid & Pemutar Video Interaktif Asli -->
-            <div class="case-phones-col">
-              <div class="phone-mockup-pink">
-                <div class="phone-top-notch"></div>
-                <img src="web_assets/images/WhatsApp Image 2026-11-19 at 23.46.13 (2).jpeg" alt="Akun TikTok WarnawarniKids" class="phone-screen-img">
-              </div>
-
-              <!-- HP Kedua: Video Asli yang Bisa Diputar -->
-              <div class="phone-mockup-pink phone-video-active">
-                <div class="phone-top-notch"></div>
-                <video id="vidFashionBocil" src="web_assets/images/WhatsApp Video 2026-11-19 at 23.46.17.mp4" poster="web_assets/images/wa_video_thumb.jpg" playsinline loop class="phone-video-player"></video>
-                <div class="video-overlay-ctrl" onclick="togglePlayVideo('vidFashionBocil', this)">
-                  <button class="play-circle-btn" aria-label="Putar Video Bocil Warna Warni">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                  </button>
-                  <span class="video-title-tag">Bocil Warna Warni Join Trend 😂</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Panel Metrik & Strategi -->
-            <div class="case-data-col">
-              <div class="account-handle-badge">
-                <span>WarnawarniKids · Gamis &amp; family fashion</span>
-              </div>
-
-              <div class="stats-three-row">
-                <div class="stat-pill-box">
-                  <span class="stat-big-val">3,078</span>
-                  <span class="stat-lbl">Top video views</span>
-                </div>
-                <div class="stat-pill-box">
-                  <span class="stat-big-val">2,394</span>
-                  <span class="stat-lbl">Trend video views</span>
-                </div>
-                <div class="stat-pill-box">
-                  <span class="stat-big-val">300+</span>
-                  <span class="stat-lbl">Views on every video</span>
-                </div>
-              </div>
-
-              <div class="strategy-list-box">
-                <h3 class="strategy-heading">Strategy in action</h3>
-                <ul class="strategy-bullets">
-                  <li><strong>One signature look:</strong> a bold text-box hook on every thumbnail, so the feed is instantly recognizable</li>
-                  <li><strong>Hooks from real mom-life:</strong> “Caught by Mom”, “Mama PMS!!”, “Gossiped about by the neighbors”</li>
-                  <li><strong>Trend-jacking:</strong> “Join the Trend” reached 2,394 views</li>
-                  <li><strong>Curiosity + value hook:</strong> “Need Money 1M” became the top performer at 3,078 views</li>
-                  <li><strong>“Join Live Now!!”</strong> pulls viewers from short video directly into live selling sessions</li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SLIDE 11: FROM SCROLL TO SALE FUNNEL       -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-funnel" id="funnel" data-slide-index="11">
-      <div class="canva-card funnel-card">
-        <div class="card-inner funnel-inner">
-          
-          <div class="funnel-top-bar">
-            <div class="pill-banner-pink">
-              <h2>From Scroll to Sale</h2>
-            </div>
-            <p class="funnel-sub">My content-to-commerce funnel</p>
-          </div>
-
-          <div class="funnel-steps-grid">
-            <div class="funnel-step-box">
-              <div class="step-circle">1</div>
-              <h3>Attract</h3>
-              <p>Trend + hook videos that stop the scroll</p>
-            </div>
-            <div class="funnel-step-box">
-              <div class="step-circle">2</div>
-              <h3>Engage</h3>
-              <p>Stories and tutorials that earn comments, saves and shares</p>
-            </div>
-            <div class="funnel-step-box">
-              <div class="step-circle">3</div>
-              <h3>Convert</h3>
-              <p>Live shopping, pinned best-sellers, urgency offers</p>
-            </div>
-            <div class="funnel-step-box">
-              <div class="step-circle">4</div>
-              <h3>Learn</h3>
-              <p>Check the numbers, keep what works, fix what doesn't</p>
-            </div>
-          </div>
-
-          <div class="engine-process-bar">
-            <span class="engine-label">My daily content engine:</span>
-            <div class="engine-steps-flow">
-              <span class="eng-step">Ideate</span>
-              <span class="eng-arr">&rarr;</span>
-              <span class="eng-step">Film</span>
-              <span class="eng-arr">&rarr;</span>
-              <span class="eng-step">Edit</span>
-              <span class="eng-arr">&rarr;</span>
-              <span class="eng-step">Schedule</span>
-              <span class="eng-arr">&rarr;</span>
-              <span class="eng-step">Analyze</span>
-              <span class="eng-arr">&rarr;</span>
-              <span class="eng-step">Improve</span>
-            </div>
-          </div>
-
-          <div class="proof-converts-bar">
-            <span class="proof-title">Proof it converts:</span>
-            <div class="proof-items-row">
-              <div class="proof-item"><strong>#1 Total Report GMV</strong></div>
-              <div class="proof-item"><strong>Top 3</strong> · Focallure Official Shop (Shopee)</div>
-              <div class="proof-item"><strong>Top 5</strong> · Pinkflash Beauty (TikTok)</div>
-              <div class="proof-item"><strong>Top 5</strong> · Focallure Indonesia Live (TikTok)</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- SLIDE 12: SECTION DIVIDER — PORTFOLIO      -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-divider" id="section-portfolio" data-slide-index="12">
-      <div class="canva-card divider-card">
-        <div class="card-inner divider-inner">
-          
-          <div class="floating-sticker sticker-curler" aria-hidden="true">
-            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#FF5DA8" stroke-width="2"><path d="M6 18h12M12 6v12M9 6a3 3 0 1 0 6 0"/></svg>
-          </div>
-          <div class="floating-sticker sticker-mirror" aria-hidden="true">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="#FFB8DE" stroke="#FF2E93" stroke-width="2"><circle cx="12" cy="9" r="6"/><path d="M12 15v6M9 19h6"/></svg>
-          </div>
-
-          <div class="cover-badge-oval">
-            <h2 class="cover-title-name">Portfolio</h2>
-            <div class="cover-subtitle-script">Achievements</div>
-          </div>
-
-          <p class="cover-role-tag">BEST GMV · TOP RANKINGS · AUDIT EVALUATIONS</p>
-
-          <div class="divider-actions">
-            <button class="btn-primary-pink" onclick="goToSlide(13)">
-              <span>Lihat Bukti Prestasi Penjualan</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <!-- SLIDE 5: FAVORITE MAKEUP CREATIONS -->
+      <section class="deck-slide" id="slide-5" data-slide-index="5" data-slide-title="05 · Favorite Makeup Creations (Live Selling)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_5.png" alt="Favorite Makeup Creations — Focallure & Pinkflash Live" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <button type="button" class="hotspot-zoom-trigger" onclick="openImageModal('web_assets/images/canva_slides/page_5.png', 'Koleksi Kreasi Makeup & Live Streaming Focallure dan Pinkflash')" style="top: 25%; left: 3%; width: 94%; height: 68%;">
+              <span class="zoom-tag-pill">🔍 Klik untuk Perbesar 5 Kreasi Makeup & Live Selling</span>
             </button>
           </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 13: BEST GMV LEADERBOARD             -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-best-gmv" id="best-gmv" data-slide-index="13">
-      <div class="canva-card achievement-card">
-        <div class="card-inner achievement-inner">
-          
-          <div class="achievement-header-wrap">
-            <h2 class="bubble-header-title">Best GMV</h2>
+      <!-- SLIDE 6: DAILY TIKTOK CONTENT PRODUCTION -->
+      <section class="deck-slide" id="slide-6" data-slide-index="6" data-slide-title="06 · Produksi Konten Harian TikTok (40k & 68k Views)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_6.png" alt="Daily TikTok Content Production — Neneng Fatmah" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <div class="hotspot-badge-pill" style="bottom: 12%; right: 8%;">
+              <span>🔥 40.3k Views (Liptint) &amp; 68.2k Views (Eyeshadow Palette)</span>
+            </div>
           </div>
-
-          <div class="achievement-frame">
-            <img src="web_assets/images/canva_slides/page_13.png" alt="Juara 1 Total Report GMV Rp 191 Juta — Neneng Fatmah" class="canva-slide-full-img">
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 14: TOP 3 SELLING FOCALLURE SHOPEE   -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-shopee-top3" id="shopee-top3" data-slide-index="14">
-      <div class="canva-card achievement-card">
-        <div class="card-inner achievement-inner">
-          
-          <div class="pill-banner-pink">
-            <h2>Top 3 selling at Focallure Official Shop (SHOPEE)</h2>
+      <!-- SLIDE 7: SECTION DIVIDER — STRATEGY -->
+      <section class="deck-slide" id="slide-7" data-slide-index="7" data-slide-title="07 · Divider: Social Media Strategy">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_7.png" alt="Social Media Strategy Divider" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <div class="hotspot-bottom-actions">
+              <button type="button" class="btn-canva-action primary" onclick="goToSlide(8)">
+                <span>Pelajari 4-Pillar Playbook</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
           </div>
-
-          <div class="achievement-frame">
-            <img src="web_assets/images/canva_slides/page_14.png" alt="Peringkat 3 Penjualan Focallure Official Shop Shopee — Neneng Fatmah" class="canva-slide-full-img">
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 15: TOP 5 SELLING PINKFLASH TIKTOK   -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-pinkflash-top5" id="pinkflash-top5" data-slide-index="15">
-      <div class="canva-card achievement-card">
-        <div class="card-inner achievement-inner">
-          
-          <div class="pill-banner-pink">
-            <h2>Top 5 selling at Pinkflash Beauty (TikTok)</h2>
+      <!-- SLIDE 8: 4-PILLAR CONTENT PLAYBOOK -->
+      <section class="deck-slide" id="slide-8" data-slide-index="8" data-slide-title="08 · 4-Pillar Content Playbook (Stop the Scroll)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_8.png" alt="4-Pillar Content Playbook — Stop the Scroll. Start the Sale." class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <div class="hotspot-badge-pill" style="bottom: 12%; left: 8%;">
+              <span>💡 1. Hook First · 2. Relatable Story · 3. Educate &amp; Demo · 4. Convert Urgency</span>
+            </div>
           </div>
-
-          <div class="achievement-frame">
-            <img src="web_assets/images/canva_slides/page_15.png" alt="Peringkat 5 Penjualan Pinkflash Beauty TikTok — Neneng Fatmah" class="canva-slide-full-img">
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 16: TOP 5 FOCALLURE INDONESIA LIVE   -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-focallure-top5" id="focallure-top5" data-slide-index="16">
-      <div class="canva-card achievement-card">
-        <div class="card-inner achievement-inner">
-          
-          <div class="pill-banner-pink">
-            <h2>Top 5 selling at Focallure Indonesia Live (TikTok)</h2>
+      <!-- SLIDE 9: CASE STUDY — BEAUTY ON TIKTOK -->
+      <section class="deck-slide" id="slide-9" data-slide-index="9" data-slide-title="09 · Studi Kasus Beauty (@cantikcuan.id)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_9.png" alt="Case Study: Beauty on TikTok @cantikcuan.id" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <a href="https://www.tiktok.com/@cantikcuan.id" target="_blank" rel="noopener" class="btn-canva-action link-hotspot" style="top: 21%; right: 18%;">
+              <span>🔗 Buka TikTok @cantikcuan.id</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
           </div>
-
-          <div class="achievement-frame">
-            <img src="web_assets/images/canva_slides/page_16.png" alt="Peringkat 5 Penjualan Focallure Indonesia Live TikTok — Neneng Fatmah" class="canva-slide-full-img">
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 17: BEST MAKEUP POINTS               -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-makeup-points" id="makeup-points" data-slide-index="17">
-      <div class="canva-card achievement-card">
-        <div class="card-inner achievement-inner">
+      <!-- SLIDE 10: CASE STUDY — MODEST FASHION (INTERACTIVE VIDEO PLAYER) -->
+      <section class="deck-slide" id="slide-10" data-slide-index="10" data-slide-title="10 · Studi Kasus Fashion (Video Interaktif)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_10.png" alt="Case Study: Modest Fashion on TikTok WarnawarniKids" class="slide-bg-canvas" draggable="false">
           
-          <div class="achievement-frame">
-            <img src="web_assets/images/canva_slides/page_17.png" alt="Best Makeup Points +2 Point Good Eye Makeup & Cute — Neneng Fatmah" class="canva-slide-full-img">
-          </div>
+          <div class="slide-hotspot-layer">
+            <!-- Link ke TikTok WarnawarniKids -->
+            <a href="https://www.tiktok.com/@warnawarni_kids" target="_blank" rel="noopener" class="btn-canva-action link-hotspot" style="top: 21%; right: 18%;">
+              <span>🔗 Buka TikTok WarnawarniKids</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
 
-        </div>
-      </div>
-    </section>
+            <!-- ===================================================================
+                 PEMUTAR VIDEO ASLI TIKTOK INTERAKTIF (BOCIL WARNA WARNI TREND)
+                 Posisi tepat di HP kedua sesuai koordinat Canva 2160x1215
+                 =================================================================== -->
+            <div class="slide-video-phone-hotspot" id="videoPhoneHotspot">
+              <video id="vidFashionBocil" src="web_assets/images/WhatsApp Video 2026-11-19 at 23.46.17.mp4" poster="web_assets/images/wa_video_thumb.jpg" playsinline loop class="slide-phone-video"></video>
+              
+              <!-- Video Overlay Play Button -->
+              <div class="video-hotspot-overlay" id="videoHotspotOverlay" onclick="togglePlayVideo('vidFashionBocil')">
+                <div class="play-btn-circle" title="Putar Video Bocil Warna Warni">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <span class="video-badge-pill">▶ Tonton Video Trend</span>
+              </div>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 18: WHAT I BRING TO YOUR TEAM        -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-what-i-bring" id="what-i-bring" data-slide-index="18">
-      <div class="canva-card what-card">
-        <div class="card-inner what-inner">
-          
-          <div class="pill-banner-pink">
-            <h2>What I Bring to Your Team</h2>
-          </div>
-
-          <div class="what-grid-layout">
-            <div class="what-phone-col">
-              <div class="phone-mockup-pink">
-                <div class="phone-top-notch"></div>
-                <img src="web_assets/images/canva_slides/page_18.png" alt="Live Host Snapshot" class="phone-screen-img what-snapshot-crop">
+              <!-- Video Quick Action Controls (Mute & Fullscreen Modal) -->
+              <div class="video-active-bar" id="videoActiveBar">
+                <button type="button" class="v-mini-btn mute-btn" id="videoMuteBtn" onclick="toggleMuteVideo('vidFashionBocil', event)" title="Suara Video (On/Off)">
+                  🔊
+                </button>
+                <button type="button" class="v-mini-btn expand-btn" onclick="openVideoModal(event)" title="Perbesar Layar Penuh">
+                  ⛶
+                </button>
               </div>
             </div>
 
-            <div class="what-card-pink">
-              <h3 class="what-col-title">As a Social Media Specialist</h3>
-              <ul class="what-bullets">
-                <li>Content calendar and consistent daily posting</li>
-                <li>Trend research and hook-first strategy</li>
-                <li>TikTok + Shopee Live platform know-how</li>
-                <li>Performance tracking and optimization</li>
-                <li>Works to supervisor targets and brand strategy</li>
-              </ul>
-            </div>
-
-            <div class="what-card-pink">
-              <h3 class="what-col-title">As a Content Creator</h3>
-              <ul class="what-bullets">
-                <li>Idea &rarr; script &rarr; filming &rarr; editing, end to end</li>
-                <li>5 years of on-camera confidence as a live host</li>
-                <li>Makeup artistry and product demos that sell</li>
-                <li>Storytelling and humor that feels real</li>
-                <li>Adapts to any brand voice: beauty to fashion</li>
-              </ul>
-            </div>
           </div>
-
-          <div class="what-bottom-banner">
-            <span>Let's make your brand impossible to scroll past ✨</span>
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ========================================== -->
-    <!-- SLIDE 19: THANK YOU & CONTACT FORM         -->
-    <!-- ========================================== -->
-    <section class="deck-slide slide-thank-you" id="thank-you" data-slide-index="19">
-      <div class="canva-card thank-card">
-        <div class="card-inner thank-inner">
-          
-          <div class="cover-badge-oval thank-oval">
-            <h2 class="cover-title-name">Thank You</h2>
-          </div>
-
-          <p class="thank-sub">Tertarik bekerja sama atau ingin mendiskusikan kampanye live streaming &amp; konten video brand Anda?</p>
-
-          <div class="thank-contact-channels">
-            <a href="https://wa.me/6285926090441?text=Halo%20Kak%20Neneng%20(NEFA),%20saya%20tertarik%20bekerja%20sama" target="_blank" rel="noopener" class="contact-pill-btn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-              <span>WhatsApp: +62 859-2609-0441</span>
-            </a>
-            <a href="mailto:nenengfatmah123@gmail.com" class="contact-pill-btn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span>Email: nenengfatmah123@gmail.com</span>
-            </a>
-            <a href="https://www.linkedin.com/in/neneng-patmah-9bb029275" target="_blank" rel="noopener" class="contact-pill-btn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              <span>LinkedIn Profile</span>
-            </a>
-          </div>
-
-          <!-- Quick WhatsApp Inquiry Form -->
-          <form class="pink-inquiry-form" id="quickInquiryForm" onsubmit="handleInquirySubmit(event)">
-            <div class="form-row-dual">
-              <input type="text" id="brandNameInput" placeholder="Nama Brand / Usaha Anda" required>
-              <input type="text" id="contactPersonInput" placeholder="Nama Anda (PIC)" required>
+      <!-- SLIDE 11: FROM SCROLL TO SALE FUNNEL -->
+      <section class="deck-slide" id="slide-11" data-slide-index="11" data-slide-title="11 · Funnel From Scroll to Sale">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_11.png" alt="From Scroll to Sale — Content to Commerce Funnel" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <div class="hotspot-badge-pill" style="bottom: 12%; left: 8%;">
+              <span>📈 Attract &rarr; Engage &rarr; Convert &rarr; Learn | Ideate &rarr; Film &rarr; Edit &rarr; Analyze</span>
             </div>
-            <div class="form-row-dual">
-              <select id="serviceSelect" required>
-                <option value="" disabled selected>Pilih Kebutuhan Kolaborasi</option>
-                <option value="Host Live Streaming TikTok / Shopee">Host Live Streaming (TikTok / Shopee)</option>
-                <option value="Produksi Konten Video TikTok / Reels">Produksi Konten Video TikTok / Reels</option>
-                <option value="Paket Lengkap Live + Konten Harian">Paket Lengkap Live + Konten Harian</option>
-                <option value="Diskusi Kustom / Kebutuhan Lain">Diskusi Kustom / Kebutuhan Lain</option>
-              </select>
-              <input type="text" id="phoneInput" placeholder="Nomor WhatsApp Anda" required>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 12: SECTION DIVIDER — PORTFOLIO -->
+      <section class="deck-slide" id="slide-12" data-slide-index="12" data-slide-title="12 · Divider: Portfolio Achievements">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_12.png" alt="Portfolio Achievements Divider" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <div class="hotspot-bottom-actions">
+              <button type="button" class="btn-canva-action primary" onclick="goToSlide(13)">
+                <span>Lihat Bukti Juara GMV &amp; Rekor Penjualan</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
             </div>
-            <textarea id="messageInput" rows="2" placeholder="Ceritakan brief produk atau rencana jadwal live Anda..." required></textarea>
-            <button type="submit" class="btn-primary-pink submit-pink-btn">
-              <span>Kirim Pesan via WhatsApp Langsung</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 13: BEST GMV LEADERBOARD (JUARA 1 RP 191 JUTA) -->
+      <section class="deck-slide" id="slide-13" data-slide-index="13" data-slide-title="13 · Juara 1 Best GMV Rp 191 Juta (Neneng Fatmah)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_13.png" alt="Best GMV Rank #1 Neneng Fatmah Rp 191.594.524" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <button type="button" class="hotspot-zoom-trigger" onclick="openImageModal('web_assets/images/canva_slides/page_13.png', 'Bukti Leaderboard Juara 1 Total Report GMV Rp 191.594.524 — Neneng Fatmah')" style="top: 25%; left: 16%; width: 68%; height: 60%;">
+              <span class="zoom-tag-pill">🏆 Juara 1 Total Report GMV: Rp 191.594.524 (Klik untuk Zoom)</span>
             </button>
-          </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 14: TOP 3 SELLING AT FOCALLURE OFFICIAL SHOP (SHOPEE) -->
+      <section class="deck-slide" id="slide-14" data-slide-index="14" data-slide-title="14 · Top 3 Selling Focallure Official Shop (Shopee)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_14.png" alt="Top 3 selling at Focallure Official Shop (SHOPEE)" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <button type="button" class="hotspot-zoom-trigger" onclick="openImageModal('web_assets/images/canva_slides/page_14.png', 'Peringkat 3 Penjualan Terbanyak Focallure Official Shop (Shopee) — Neneng Fatmah')" style="top: 25%; left: 8%; width: 84%; height: 64%;">
+              <span class="zoom-tag-pill">🛍️ Peringkat 3 Penjualan Focallure Shopee (Klik untuk Zoom)</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 15: TOP 5 SELLING AT PINKFLASH BEAUTY (TIKTOK) -->
+      <section class="deck-slide" id="slide-15" data-slide-index="15" data-slide-title="15 · Top 5 Selling Pinkflash Beauty (TikTok)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_15.png" alt="Top 5 selling at Pinkflash Beauty (TikTok)" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <button type="button" class="hotspot-zoom-trigger" onclick="openImageModal('web_assets/images/canva_slides/page_15.png', 'Peringkat 5 Penjualan Terbanyak Pinkflash Beauty (TikTok) — Neneng Fatmah')" style="top: 25%; left: 10%; width: 80%; height: 60%;">
+              <span class="zoom-tag-pill">🌸 Peringkat 5 Penjualan Pinkflash Beauty (Klik untuk Zoom)</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 16: TOP 5 SELLING AT FOCALLURE INDONESIA LIVE (TIKTOK) -->
+      <section class="deck-slide" id="slide-16" data-slide-index="16" data-slide-title="16 · Top 5 Selling Focallure Indonesia Live (TikTok)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_16.png" alt="Top 5 selling at Focallure Indonesia Live (TikTok)" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <button type="button" class="hotspot-zoom-trigger" onclick="openImageModal('web_assets/images/canva_slides/page_16.png', 'Peringkat 5 Penjualan Terbanyak Focallure Indonesia Live (TikTok) — Neneng Fatmah')" style="top: 25%; left: 8%; width: 84%; height: 62%;">
+              <span class="zoom-tag-pill">💄 Peringkat 5 Penjualan Focallure Indonesia Live (Klik untuk Zoom)</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 17: BEST MAKEUP POINTS (+2 POINT AUDIT EVALUATION) -->
+      <section class="deck-slide" id="slide-17" data-slide-index="17" data-slide-title="17 · Best Makeup Points (+2 Point Audit)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_17.png" alt="+2 point : Good eye makeup + Cute — Best Makeup Points Neneng Fatmah" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <button type="button" class="hotspot-zoom-trigger" onclick="openImageModal('web_assets/images/canva_slides/page_17.png', 'Evaluasi Audit Live: +2 Point Good Eye Makeup & Cute — Neneng Fatmah')" style="top: 15%; left: 12%; width: 76%; height: 75%;">
+              <span class="zoom-tag-pill">⭐ Nilai Sempurna Audit +2 Point: Good Eye Makeup + Cute (Klik untuk Zoom)</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 18: WHAT I BRING TO YOUR TEAM -->
+      <section class="deck-slide" id="slide-18" data-slide-index="18" data-slide-title="18 · What I Bring to Your Team (Specialist & Creator)">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_18.png" alt="What I Bring to Your Team — Social Media Specialist & Content Creator" class="slide-bg-canvas" draggable="false">
+          <div class="slide-hotspot-layer">
+            <div class="hotspot-bottom-actions">
+              <button type="button" class="btn-canva-action primary" onclick="goToSlide(19)">
+                <span>Siap Bekerja Sama? Hubungi Saya</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 19: THANK YOU & INTERACTIVE CONTACT -->
+      <section class="deck-slide" id="slide-19" data-slide-index="19" data-slide-title="19 · Thank You &amp; Kontak Kolaborasi">
+        <div class="slide-aspect-canvas">
+          <img src="web_assets/images/canva_slides/page_19.png" alt="Thank You — Neneng Fatmah Portfolio" class="slide-bg-canvas" draggable="false">
+          
+          <div class="slide-hotspot-layer">
+            <div class="thank-interactive-panel">
+              <div class="thank-channels-grid">
+                <a href="https://wa.me/6285926090441?text=Halo%20Kak%20Neneng%20Fatmah%20(NEFA),%20saya%20tertarik%20bekerja%20sama" target="_blank" rel="noopener" class="contact-card-pink">
+                  <div class="contact-icon-box">💬</div>
+                  <div class="contact-meta">
+                    <span class="contact-label">WhatsApp</span>
+                    <span class="contact-val">+62 859-2609-0441</span>
+                  </div>
+                </a>
+
+                <a href="mailto:nenengfatmah123@gmail.com" class="contact-card-pink">
+                  <div class="contact-icon-box">✉️</div>
+                  <div class="contact-meta">
+                    <span class="contact-label">Email</span>
+                    <span class="contact-val">nenengfatmah123@gmail.com</span>
+                  </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/neneng-patmah-9bb029275" target="_blank" rel="noopener" class="contact-card-pink">
+                  <div class="contact-icon-box">💼</div>
+                  <div class="contact-meta">
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-val">Neneng Patmah</span>
+                  </div>
+                </a>
+
+                <a href="Neneng_Patmah_Portfolio.pdf" download="Neneng_Patmah_Portfolio.pdf" class="contact-card-pink">
+                  <div class="contact-icon-box">📄</div>
+                  <div class="contact-meta">
+                    <span class="contact-label">Dokumen Resmi</span>
+                    <span class="contact-val">Unduh PDF (19 Slide)</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Tombol Buka Form Cepat -->
+              <div class="thank-form-trigger-row">
+                <button type="button" class="btn-primary-pink" onclick="openInquiryModal()">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  <span>Kirim Brief / Pertanyaan Cepat ke WhatsApp</span>
+                </button>
+              </div>
+            </div>
+          </div>
 
         </div>
-      </div>
-    </section>
+      </section>
 
+    </div>
   </main>
+
+  <!-- ==========================================================================
+       MODALS & LIGHTBOX OVERLAYS
+       ========================================================================== -->
+  
+  <!-- 1. MODAL PEMUTAR VIDEO BOCIL WARNA WARNI (HD EXPANDED) -->
+  <div class="custom-modal-backdrop" id="videoModalBackdrop" onclick="closeVideoModal(event)">
+    <div class="video-modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header-bar">
+        <div class="modal-title-wrap">
+          <span class="modal-badge-icon">🎬</span>
+          <span class="modal-title-text">Bocil Warna Warni Join Trend (WarnawarniKids)</span>
+        </div>
+        <button type="button" class="modal-close-btn" onclick="closeVideoModal()" aria-label="Tutup Pemutar Video">✕</button>
+      </div>
+
+      <div class="modal-phone-body">
+        <video id="modalVideoPlayer" src="web_assets/images/WhatsApp Video 2026-11-19 at 23.46.17.mp4" poster="web_assets/images/wa_video_thumb.jpg" controls playsinline class="modal-inner-video"></video>
+      </div>
+
+      <div class="modal-footer-bar">
+        <a href="https://www.tiktok.com/@warnawarni_kids" target="_blank" rel="noopener" class="btn-primary-pink">
+          <span>Kunjungi Akun TikTok WarnawarniKids</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MODAL LIGHTBOX GAMBAR / BUKTI AUDIT & GMV -->
+  <div class="custom-modal-backdrop" id="imageModalBackdrop" onclick="closeImageModal()">
+    <div class="image-modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header-bar">
+        <div class="modal-title-wrap">
+          <span class="modal-badge-icon">🔍</span>
+          <span class="modal-title-text" id="imageModalTitle">Bukti Dokumen &amp; Portofolio</span>
+        </div>
+        <button type="button" class="modal-close-btn" onclick="closeImageModal()" aria-label="Tutup Gambar">✕</button>
+      </div>
+      <div class="image-modal-body">
+        <img id="imageModalSrc" src="" alt="Pratinjau Resolusi Tinggi Dokumen" class="lightbox-img-full">
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. MODAL FORM INQUIRY WHATSAPP CEPAT -->
+  <div class="custom-modal-backdrop" id="inquiryModalBackdrop" onclick="closeInquiryModal(event)">
+    <div class="inquiry-modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header-bar">
+        <div class="modal-title-wrap">
+          <span class="modal-badge-icon">💖</span>
+          <span class="modal-title-text">Kirim Pesan / Brief Kolaborasi ke WhatsApp</span>
+        </div>
+        <button type="button" class="modal-close-btn" onclick="closeInquiryModal()" aria-label="Tutup Form">✕</button>
+      </div>
+
+      <form class="pink-inquiry-form modal-form" id="quickInquiryForm" onsubmit="handleInquirySubmit(event)">
+        <p class="form-desc-lead">Isi form singkat di bawah ini untuk memulai obrolan langsung via WhatsApp dengan Neneng Fatmah (NEFA):</p>
+        
+        <div class="form-row-dual">
+          <div class="form-field">
+            <label for="brandNameInput">Nama Brand / Usaha</label>
+            <input type="text" id="brandNameInput" placeholder="Contoh: Brand Skincare / Fashion" required>
+          </div>
+          <div class="form-field">
+            <label for="contactPersonInput">Nama Anda (PIC)</label>
+            <input type="text" id="contactPersonInput" placeholder="Nama lengkap Anda" required>
+          </div>
+        </div>
+
+        <div class="form-row-dual">
+          <div class="form-field">
+            <label for="serviceSelect">Kebutuhan Kolaborasi</label>
+            <select id="serviceSelect" required>
+              <option value="" disabled selected>Pilih Kebutuhan</option>
+              <option value="Host Live Streaming TikTok / Shopee">Host Live Streaming (TikTok / Shopee)</option>
+              <option value="Produksi Konten Harian Video TikTok / Reels">Produksi Konten Harian TikTok / Reels</option>
+              <option value="Paket Lengkap Live Selling + Konten Harian">Paket Lengkap Live + Konten Harian</option>
+              <option value="Konsultasi & Diskusi Strategi Brand">Konsultasi &amp; Diskusi Strategi Brand</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="phoneInput">Nomor WhatsApp Anda</label>
+            <input type="tel" id="phoneInput" placeholder="08xxxxxxxxxx" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="messageInput">Catatan / Rencana Jadwal Live</label>
+          <textarea id="messageInput" rows="3" placeholder="Ceritakan brief produk, jadwal yang diinginkan, atau pertanyaan Anda..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary-pink submit-pink-btn">
+          <span>Kirim Pesan ke WhatsApp Sekarang</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
 
   <!-- Checkered Accent Bottom Bar -->
   <div class="pink-checker-bar bottom-checker" aria-hidden="true"></div>
 
-  <!-- Audio Sentuhan Lembut Feedback Navigasi -->
+  <!-- Audio Feedback Element -->
   <audio id="tactileSound" preload="none"></audio>
 
   <!-- Script Aplikasi Utama -->

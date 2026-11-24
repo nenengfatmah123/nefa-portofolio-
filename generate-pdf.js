@@ -117,7 +117,7 @@ async function generatePDF() {
     pdfContainer.className = 'pdf-slides-container';
 
     slidesData.forEach((slideInfo, index) => {
-      const sectionEl = document.getElementById(slideInfo.id);
+      const sectionEl = document.querySelector(`[data-slide-index="${index + 1}"]`) || document.getElementById(slideInfo.id);
       if (!sectionEl) return;
 
       const pageEl = document.createElement('div');
@@ -350,9 +350,17 @@ async function generatePDF() {
         display: block !important;
       }
 
-      .pink-canva-card {
+      .slide-aspect-canvas {
+        width: 1320px !important;
+        max-height: 775px !important;
+        aspect-ratio: 16 / 9 !important;
         margin: 0 auto !important;
         box-shadow: 0 6px 0 #FF2E93, 0 12px 24px rgba(255, 46, 147, 0.15) !important;
+        border-radius: 20px !important;
+      }
+
+      .video-active-bar, .video-hotspot-overlay, .hotspot-zoom-trigger, .hotspot-bottom-actions {
+        display: none !important;
       }
 
       .phone-video-player, video {
