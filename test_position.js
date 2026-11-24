@@ -1,0 +1,134 @@
+const puppeteer = require('puppeteer');
+const path = require('path');
+const fs = require('fs');
+
+async function testPosition() {
+  // Let's create a test html with the exact new coordinates
+  const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { margin: 0; background: #FFEAF4; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .slide-aspect-canvas {
+      position: relative;
+      width: 1280px;
+      aspect-ratio: 16 / 9;
+      background: #FFFFFF;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(255, 46, 147, 0.22);
+      border: 3px solid rgba(255, 46, 147, 0.2);
+    }
+    .slide-bg-canvas {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .slide-video-phone-hotspot {
+      position: absolute;
+      top: 21.73%;
+      left: 23.61%;
+      width: 16.02%;
+      height: 64.86%;
+      border-radius: clamp(10px, 1.3vw, 18px);
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .slide-phone-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .video-hotspot-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .play-btn-circle {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #FF2E93;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 16px rgba(255, 46, 147, 0.8);
+      padding-left: 2px;
+    }
+    .video-badge-pill {
+      background: rgba(255,255,255,0.95);
+      color: #FF2E93;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      font-family: sans-serif;
+    }
+    .btn-tiktok-pill {
+      position: absolute;
+      top: 3.5%;
+      right: 3.5%;
+      background: #FFFFFF;
+      color: #FF2E93;
+      border: 2px solid #FF2E93;
+      box-shadow: 0 4px 14px rgba(255, 46, 147, 0.25);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-family: sans-serif;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-aspect-canvas">
+    <img src="web_assets/images/canva_slides/page_10.png" class="slide-bg-canvas">
+    
+    <a href="https://www.tiktok.com/@warnawarni_kids" target="_blank" class="btn-tiktok-pill">
+      <span>🔗 Buka TikTok WarnawarniKids</span>
+    </a>
+
+    <div class="slide-video-phone-hotspot">
+      <video src="web_assets/images/WhatsApp Video 2026-11-19 at 23.46.17.mp4" poster="web_assets/images/wa_video_thumb.jpg" class="slide-phone-video"></video>
+      <div class="video-hotspot-overlay">
+        <div class="play-btn-circle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <span class="video-badge-pill">▶ Tonton Video Trend</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+  `;
+
+  fs.writeFileSync('test_pos_phone.html', html);
+
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--allow-file-access-from-files', '--disable-web-security']
+  });
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1400, height: 900 });
+  await page.goto('file:///' + path.resolve('test_pos_phone.html').replace(/\\/g, '/'), { waitUntil: 'domcontentloaded' });
+  await new Promise(r => setTimeout(r, 800));
+  await page.screenshot({ path: 'test_pos_result.png' });
+  await browser.close();
+  console.log('Saved test_pos_result.png');
+}
+
+testPosition().catch(console.error);

@@ -660,13 +660,13 @@ body:not(.mode-slide-deck) .slide-deck-controls {
    ========================================================================== */
 .slide-video-phone-hotspot {
   position: absolute;
-  top: 22.8%;
-  left: 24.1%;
-  width: 16.05%;
-  height: 67.5%;
-  border-radius: clamp(14px, 2.3vw, 32px);
+  top: 21.73%;
+  left: 23.61%;
+  width: 16.02%;
+  height: 64.86%;
+  border-radius: clamp(10px, 1.35vw, 20px);
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
   background: #000000;
   cursor: pointer;
 }

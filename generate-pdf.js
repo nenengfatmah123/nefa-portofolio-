@@ -359,7 +359,7 @@ async function generatePDF() {
         border-radius: 20px !important;
       }
 
-      .video-active-bar, .video-hotspot-overlay, .hotspot-zoom-trigger, .hotspot-bottom-actions {
+      .slide-video-phone-hotspot, .video-active-bar, .video-hotspot-overlay, .hotspot-zoom-trigger, .hotspot-bottom-actions, .btn-canva-action {
         display: none !important;
       }
 
